@@ -18,4 +18,4 @@ target_link_libraries(kis PRIVATE ${X11_LIBRARIES} ${SQLite3_LIBRARIES} OpenSSL:
 enable_testing()
 add_executable(test_kis tests/test_kis.cpp src/input_stats.cpp src/storage.cpp src/encryptor.cpp)
 target_include_directories(test_kis PRIVATE src ${X11_INCLUDE_DIRS} ${SQLite3_INCLUDE_DIRS})
-target_link_libraries(test_kis PRIVATE GTest::GTest GTest::MainMock ${X11_LIBRARIES} ${SQLite3_LIBRARIES} OpenSSL::SSL OpenSSL::Crypto)
+target_link_libraries(test_kis PRIVATE GTest::GTest GTest::gtest_main ${X11_LIBRARIES} ${SQLite3_LIBRARIES} OpenSSL::SSL OpenSSL::Crypto)
